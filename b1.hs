@@ -24,10 +24,29 @@ data Acu = Acu {
   current :: Int
 } deriving Show
 
+input = "BABAABAAA"
+
 acu :: Acu
 acu = Acu temp2 "B" [] 3
 
-ab = foldl test acu "ABAABAAA"
+acu2 :: String -> Acu
+acu2 prefix = Acu temp2 prefix [] 3
+
+ab (x:xs) = foldl test (acu2 [x]) xs
+cd :: Acu
+cd = ab input
+
+fg :: [Char] -> [Int]
+fg xs = result
+ where
+  c = ab xs
+  d = dict c
+  e = prefix c
+  os = output c
+  code = d ! e
+  out = code : os
+  result = reverse out
+  
 
 exists :: String -> Char -> Slovnik -> Bool 
 exists pref char dictionary = b
