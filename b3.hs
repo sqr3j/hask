@@ -50,7 +50,7 @@ build xs = cs
   
 
 data Acu = Acu {
-  dict:: Slovnik,
+  dict :: Slovnik,
   prefix :: String,
   output :: Codes,
   current :: Int -- next codeword to insert in the dictionary
